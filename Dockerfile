@@ -1,4 +1,4 @@
-FROM python:2.7-slim
+FROM python:3.7-slim
 
 SHELL ["/bin/bash", "-c"]
 
@@ -14,7 +14,7 @@ RUN apt-get update -qq && \
   libssl-dev \
   libffi6 \
   libffi-dev \
-  libpng-dev \
+  libpng12-dev \
   curl && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
