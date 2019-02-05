@@ -7,6 +7,27 @@ Migration Guide
 This page contains information about changes between major versions and
 how you can migrate from one version to another.
 
+.. _migration-to-0-13-0:
+
+0.12.x to 0.13.0
+----------------
+
+.. warning::
+
+    This is major new version with a lot of changes under the hood as well
+    as on the API level. Please take a careful look at the mentioned
+    before updating. Please make sure to
+    **retrain your models when switching to this version**.
+
+General
+~~~~~~~
+
+- Support for Python 2 has now been completely removed from Rasa Core, please
+  upgrade to Python 3.5 or 3.6 to continue using the software
+- If you were using the deprecated intent/entity format (``_intent[entity1=val1, entity=val2]``),
+  then you will have to update your training data to the standard format
+  (``/intent{"entity1": val1, "entity2": val2``} because it is no longer supported
+
 .. _migration-to-0-12-0:
 
 0.11.x to 0.12.0
